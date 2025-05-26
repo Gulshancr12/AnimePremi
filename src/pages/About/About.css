@@ -1,0 +1,539 @@
+/* About.css */
+.about-page {
+    color: var(--color-text-primary);
+    overflow-x: hidden;
+}
+
+.section-padding-about {
+    padding: clamp(60px, 10vh, 100px) 5%;
+    position: relative;
+}
+
+.alt-bg-about {
+    background-color: var(--color-bg-medium);
+}
+
+.section-title-about {
+    font-family: var(--font-anime-title); /* Using new font var */
+    font-size: clamp(2.2rem, 6vw, 4rem); 
+    letter-spacing: 1.5px;
+    font-weight: 400; /* Bangers is bold by default */
+    margin-bottom: 1rem;
+    color: var(--color-text-primary);
+    text-align: center;
+    position: relative;
+}
+.section-title-about::after {
+    content: '';
+    display: block;
+    width: 70px;
+    height: 3px;
+    background: linear-gradient(90deg, var(--color-accent-primary), var(--color-accent-secondary));
+    margin: 10px auto 40px;
+    border-radius: 2px;
+    box-shadow: 0 0 12px var(--glow-primary);
+}
+
+/* --- About Hero Section --- */
+.about-hero {
+    height: 60vh;
+    min-height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+    background: linear-gradient(135deg, var(--color-bg-dark) 0%, var(--color-bg-medium) 100%);
+    overflow: hidden;
+}
+.about-hero-overlay {
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: radial-gradient(ellipse at center, transparent 30%, rgba(var(--color-bg-darkest-rgb), 0.8) 100%);
+    z-index: 1;
+}
+.about-hero-content {
+    position: relative;
+    z-index: 2;
+}
+.about-hero h1 {
+    font-family: var(--font-logo);
+    font-size: clamp(2.5rem, 8vw, 4.5rem);
+    color: #fff;
+    margin-bottom: 0.5rem;
+    text-shadow: 0 0 15px var(--glow-primary);
+}
+.about-hero .highlight {
+    color: var(--color-accent-secondary);
+    text-shadow: 0 0 15px var(--glow-secondary);
+}
+.about-hero p {
+    font-size: clamp(1rem, 3vw, 1.5rem);
+    color: var(--color-text-secondary);
+    font-family: var(--font-accent); /* Updated to accent */
+    font-weight: 500;
+}
+.hero-bg-pattern {
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background-image: 
+        repeating-linear-gradient(45deg, rgba(var(--color-accent-primary-rgb),0.02) 0, rgba(var(--color-accent-primary-rgb),0.02) 1px, transparent 1px, transparent 20px),
+        repeating-linear-gradient(-45deg, rgba(var(--color-accent-secondary-rgb),0.02) 0, rgba(var(--color-accent-secondary-rgb),0.02) 1px, transparent 1px, transparent 20px);
+    animation: patternShift 20s linear infinite;
+    z-index: 0;
+}
+@keyframes patternShift {
+    to { background-position: 200px 200px; }
+}
+
+
+/* --- Our Mission Section --- */
+.mission-content-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: clamp(30px, 5vw, 60px);
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.mission-text h2 {
+    font-family: var(--font-anime-title); /* Updated */
+    font-size: clamp(2rem, 4.5vw, 3rem); /* Adjusted for Bangers */
+    letter-spacing: 1px;
+    font-weight: 400;
+    color: var(--color-text-primary);
+    margin-bottom: 20px;
+    position: relative;
+    display: inline-block;
+}
+.mission-text h2::after {
+    content: '';
+    display: block;
+    width: 60%;
+    height: 3px;
+    background: var(--color-accent-primary);
+    margin-top: 8px;
+}
+.mission-text p {
+    font-family: var(--font-body); /* Updated */
+    font-size: clamp(0.95rem, 2vw, 1.1rem);
+    line-height: 1.8;
+    color: var(--color-text-secondary);
+    margin-bottom: 15px;
+}
+.mission-image-container {
+    position: relative;
+}
+.mission-image-container img {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+    position: relative;
+    z-index: 1;
+    transition: transform 0.5s ease;
+}
+.mission-image-container:hover img {
+    transform: scale(1.03) rotate(-1deg);
+}
+.mission-image-accent {
+    position: absolute;
+    width: 90%;
+    height: 90%;
+    border: 3px solid var(--color-accent-secondary);
+    border-radius: 10px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-45%, -55%) rotate(3deg);
+    z-index: 0;
+    opacity: 0.7;
+    transition: transform 0.5s ease, opacity 0.5s ease;
+}
+.mission-image-container:hover .mission-image-accent {
+    transform: translate(-50%, -50%) rotate(0deg);
+    opacity: 1;
+}
+
+
+/* --- Core Values Section --- */
+.values-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+.value-card {
+    background-color: var(--color-bg-light);
+    padding: 30px 25px;
+    border-radius: 10px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid transparent;
+    position: relative;
+}
+.value-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 0 20px var(--glow-primary);
+    border-color: var(--color-accent-primary);
+}
+.value-icon {
+    width: 50px;
+    height: 50px;
+    margin: 0 auto 15px auto;
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+.value-card:nth-child(1) .value-icon { color: var(--color-accent-primary); }
+.value-card:nth-child(2) .value-icon { color: var(--color-accent-secondary); }
+.value-card:nth-child(3) .value-icon { color: var(--color-accent-tertiary); }
+
+.value-card:hover .value-icon {
+    transform: scale(1.15) rotate(5deg);
+    filter: drop-shadow(0 0 10px currentColor) brightness(1.2);
+}
+.value-card h3 {
+    font-family: var(--font-futuristic-title); /* Updated */
+    font-size: 1.4rem;
+    color: var(--color-text-primary);
+    margin-bottom: 10px;
+}
+.value-card p {
+    font-family: var(--font-body); /* Updated */
+    font-size: 0.9rem;
+    color: var(--color-text-secondary);
+    line-height: 1.6;
+}
+
+/* --- Meet The Team Section - Single Profile Focus (Gulshan's Card) --- */
+.team-grid.single-profile-focus {
+    max-width: 650px;
+    margin: 40px auto 0 auto;
+    perspective: 1500px; /* Add perspective for 3D children */
+}
+
+.team-member-card.gulshan-profile-card {
+    background: linear-gradient(165deg, rgba(var(--color-bg-light-rgb), 0.7) 0%, rgba(var(--color-bg-dark-rgb), 0.85) 100%);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    padding: clamp(35px, 5vw, 50px);
+    border: 1px solid rgba(var(--color-accent-quaternary-rgb), 0.2);
+    border-radius: 20px; /* More rounded */
+    box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+    position: relative;
+    overflow: hidden; 
+    transition: transform 0.7s cubic-bezier(0.075, 0.82, 0.165, 1), box-shadow 0.7s ease;
+    transform-style: preserve-3d; /* Essential for 3D child elements */
+}
+
+/* New: Inner overlay for text contrast on hover */
+.team-member-card.gulshan-profile-card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    border-radius: inherit;
+    background: linear-gradient(165deg, rgba(var(--color-bg-darkest-rgb), 0) 0%, rgba(var(--color-bg-darkest-rgb), 0.5) 100%);
+    opacity: 0;
+    transition: opacity 0.6s ease;
+    z-index: 1; /* Between background and content */
+}
+.team-member-card.gulshan-profile-card:hover::before {
+    opacity: 1; /* Darken background slightly on hover for text contrast */
+}
+
+
+.team-member-card.gulshan-profile-card .card-border-glow {
+    position: absolute;
+    top: -4px; left: -4px;
+    width: calc(100% + 8px);
+    height: calc(100% + 8px);
+    border-radius: 22px;
+    z-index: 0; /* Behind card content, but above card background */
+    background: conic-gradient(
+        from var(--hover-angle, 0deg),
+        var(--color-accent-primary),
+        var(--color-accent-secondary),
+        var(--color-accent-quaternary),
+        var(--color-accent-tertiary),
+        var(--color-accent-primary)
+    );
+    opacity: 0;
+    filter: blur(15px); /* Increased blur for a softer, wider glow */
+    transition: opacity 0.7s ease, filter 0.7s ease;
+    animation: rotateHoverBorder 6s linear infinite paused; /* Slower spin */
+}
+/* @property and @keyframes for --hover-angle already defined */
+
+.team-member-card.gulshan-profile-card:hover {
+    transform: translateY(-25px) rotateX(10deg) rotateY(-6deg) scale(1.05); /* More dramatic tilt */
+    box-shadow: 0 30px 70px rgba(var(--color-bg-darkest-rgb),0.6), /* Deeper, more defined shadow */
+                0 0 50px var(--glow-quaternary);
+    /* Removed inset shadow, rely on ::before for contrast */
+}
+.team-member-card.gulshan-profile-card:hover .card-border-glow {
+    opacity: 0.8; /* Slightly less intense border glow */
+    filter: blur(20px);
+    animation-play-state: running;
+}
+
+.team-member-card.gulshan-profile-card .team-member-img-wrapper {
+    width: clamp(160px, 25vw, 200px); /* Responsive image size */
+    height: clamp(160px, 25vw, 200px);
+    border-radius: 50%;
+    margin: 0 auto 30px auto;
+    position: relative;
+    z-index: 3; /* Above ::before overlay and border glow */
+    transition: transform 0.6s cubic-bezier(0.075, 0.82, 0.165, 1), box-shadow 0.6s ease;
+    border: 5px solid var(--color-bg-light); /* Solid border to pop image */
+    box-shadow: 0 0 20px rgba(0,0,0,0.3);
+    overflow: visible; /* Allow pseudo elements to go outside */
+    transform-style: preserve-3d; /* For 3D particles */
+}
+
+.team-member-card.gulshan-profile-card .team-member-img-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    transition: transform 0.7s ease, filter 0.7s ease;
+    position: relative; /* For z-indexing within wrapper */
+    z-index: 1;
+}
+
+/* --- CRAZY IMAGE HOVER --- */
+.team-member-card.gulshan-profile-card:hover .team-member-img-wrapper {
+    transform: scale(1.15) translateY(-15px) rotateZ(5deg) rotateY(-10deg); /* More dynamic 3D pop */
+    box-shadow: 0 0 35px var(--glow-secondary), 0 0 50px #fff, 0 8px 25px rgba(0,0,0,0.4);
+    border-color: var(--color-accent-secondary); /* Change border color on hover */
+}
+.team-member-card.gulshan-profile-card:hover .team-member-img-wrapper img {
+    transform: scale(1.03);
+    filter: brightness(1.15) saturate(1.05) contrast(1.05);
+}
+
+/* Energy/Particle Emanation from Image on Hover */
+.team-member-img-wrapper .img-particle {
+    position: absolute;
+    border-radius: 50%;
+    background-color: var(--color-accent-secondary);
+    opacity: 0;
+    transform-origin: center;
+    pointer-events: none; /* Important */
+}
+.team-member-card.gulshan-profile-card:hover .team-member-img-wrapper .img-particle {
+    animation: emanateParticle 1s ease-out forwards;
+}
+@keyframes emanateParticle {
+    0% {
+        transform: translate(var(--x-start, 0px), var(--y-start, 0px)) scale(0.1);
+        opacity: 1;
+        filter: blur(2px);
+    }
+    100% {
+        transform: translate(var(--x-end, 0px), var(--y-end, 0px)) scale(0.8);
+        opacity: 0;
+        filter: blur(0px);
+    }
+}
+/* Add more particle instances in About.jsx if you want more particles */
+/* These are examples, JS would be better for true randomness */
+.team-member-img-wrapper .img-particle.p1 { background-color: var(--color-accent-primary); animation-delay: 0.05s; }
+.team-member-img-wrapper .img-particle.p2 { animation-delay: 0.1s; }
+.team-member-img-wrapper .img-particle.p3 { background-color: var(--color-accent-tertiary); animation-delay: 0.15s; }
+
+
+.team-member-card.gulshan-profile-card h3 {
+    font-family: var(--font-futuristic-title); /* Updated */
+    font-size: clamp(2rem, 5vw, 2.5rem);
+    color: var(--color-text-primary);
+    margin-bottom: 10px;
+    text-shadow: 0 0 10px var(--glow-secondary);
+    transition: color 0.4s ease, text-shadow 0.4s ease, transform 0.4s ease;
+    position: relative; z-index: 2;
+}
+.team-member-card.gulshan-profile-card:hover h3 {
+    color: var(--color-accent-secondary);
+    text-shadow: 0 0 20px var(--glow-secondary), 0 0 35px #fff;
+    transform: scale(1.05) translateY(-2px);
+}
+
+.profile-role {
+    font-family: var(--font-accent); /* Updated */
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: var(--color-accent-primary);
+    margin-bottom: 20px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    transition: color 0.4s ease, text-shadow 0.4s ease, letter-spacing 0.4s ease, transform 0.4s ease;
+    position: relative; z-index: 2;
+}
+.team-member-card.gulshan-profile-card:hover .profile-role {
+    color: var(--color-accent-tertiary);
+    text-shadow: 0 0 12px var(--glow-tertiary);
+    letter-spacing: 1.2px;
+    transform: scale(1.03);
+}
+
+.profile-bio {
+    font-family: var(--font-body); /* Updated */
+    font-size: 1rem;
+    color: var(--color-text-secondary);
+    line-height: 1.8;
+    margin-bottom: 30px;
+    transition: color 0.4s ease;
+    position: relative; z-index: 2;
+    max-width: 500px; margin-left: auto; margin-right: auto;
+}
+.team-member-card.gulshan-profile-card:hover .profile-bio {
+    color: var(--color-text-primary);
+}
+
+.profile-skills {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+    position: relative; z-index: 2;
+}
+.profile-skills span {
+    background-color: rgba(var(--color-accent-primary-rgb), 0.1); /* More subtle base */
+    color: var(--color-accent-primary);
+    padding: 7px 18px; /* Larger tags */
+    border-radius: 25px;
+    font-family: var(--font-accent); /* Updated */
+    font-size: 0.9rem;
+    font-weight: 600;
+    border: 1px solid rgba(var(--color-accent-primary-rgb), 0.3);
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    transform-origin: center;
+}
+.team-member-card.gulshan-profile-card:hover .profile-skills span {
+    background-color: var(--color-accent-primary);
+    color: var(--color-bg-dark);
+    transform: scale(1.1) rotate(-4deg) translateY(-3px) translateZ(10px); /* Added translateZ for 3D feel */
+    box-shadow: 0 0 15px var(--glow-primary), 0 4px 10px rgba(0,0,0,0.25);
+}
+.team-member-card.gulshan-profile-card:hover .profile-skills span:nth-child(even) {
+    background-color: var(--color-accent-secondary);
+    color: var(--color-bg-dark);
+    border-color: var(--color-accent-secondary);
+    box-shadow: 0 0 15px var(--glow-secondary), 0 4px 10px rgba(0,0,0,0.25);
+    transform: scale(1.1) rotate(4deg) translateY(-3px) translateZ(10px);
+}
+
+
+/* --- Join Us / CTA --- */
+.join-us-cta {
+    text-align: center;
+    overflow: hidden;
+}
+.join-us-content {
+    max-width: 700px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 1;
+}
+.join-us-content h2 {
+    font-family: var(--font-anime-title); /* Updated */
+    font-size: clamp(2.2rem, 5.5vw, 3.2rem); /* Adjusted for Bangers */
+    letter-spacing: 1px;
+    font-weight: 400;
+    color: #fff;
+    margin-bottom: 15px;
+    text-shadow: 0 0 10px var(--glow-primary);
+}
+.join-us-content p {
+    font-family: var(--font-body); /* Updated */
+    font-size: clamp(1rem, 2.5vw, 1.2rem);
+    color: var(--color-text-secondary);
+    margin-bottom: 30px;
+}
+.futuristic-button-about {
+    display: inline-block;
+    padding: 12px 30px;
+    background: var(--color-accent-primary);
+    color: #fff;
+    border: none;
+    border-radius: 50px;
+    font-family: var(--font-futuristic-title); /* Updated */
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 1px;
+    box-shadow: 0 5px 15px rgba(var(--color-accent-primary-rgb), 0.4);
+}
+.futuristic-button-about:hover {
+    background: var(--color-accent-secondary);
+    color: var(--color-bg-dark);
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 8px 25px var(--glow-secondary);
+}
+
+.cta-bg-elements {
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    z-index: 0;
+    pointer-events: none;
+}
+.cta-bg-blob {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(50px);
+    opacity: 0.3;
+    animation: blobPulse 10s infinite alternate ease-in-out;
+}
+.blob1 {
+    width: 300px; height: 300px;
+    background-color: var(--color-accent-primary);
+    top: 10%; left: 10%;
+    animation-duration: 12s;
+}
+.blob2 {
+    width: 250px; height: 250px;
+    background-color: var(--color-accent-secondary);
+    bottom: 15%; right: 15%;
+    animation-duration: 9s;
+    animation-delay: -3s;
+}
+@keyframes blobPulse {
+    from { transform: scale(0.8) translate(-10px, 10px); opacity: 0.2; }
+    to { transform: scale(1.2) translate(10px, -10px); opacity: 0.4; }
+}
+
+/* Responsive for About Page */
+@media (max-width: 768px) {
+    .mission-content-grid {
+        grid-template-columns: 1fr;
+    }
+    .mission-text {
+        order: 2;
+        text-align: center;
+    }
+    .mission-text h2 { display: block; }
+    .mission-text h2::after { margin-left: auto; margin-right: auto; }
+    .mission-image-container {
+        order: 1;
+        margin-bottom: 30px;
+    }
+    .values-grid, .team-grid {
+        grid-template-columns: 1fr;
+    }
+    .team-member-card.gulshan-profile-card .team-member-img-wrapper {
+        width: 150px; height: 150px;
+    }
+    .team-member-card.gulshan-profile-card h3 { font-size: clamp(1.6rem, 4vw, 2rem); }
+    .profile-role { font-size: 1rem; }
+    .profile-bio { font-size: 0.9rem; }
+    .profile-skills span { font-size: 0.75rem; padding: 5px 10px; }
+}
+
+@media (max-width: 480px) {
+    .team-member-card.gulshan-profile-card { padding: 25px; }
+    .team-member-card.gulshan-profile-card .team-member-img-wrapper {
+        width: 130px; height: 130px; margin-bottom: 20px;
+    }
+    .team-member-card.gulshan-profile-card h3 { font-size: 1.6rem; }
+    .profile-role { font-size: 0.95rem; }
+    .profile-bio { font-size: 0.85rem; }
+}
