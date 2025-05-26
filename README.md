@@ -1,13 +1,10 @@
 # 🌟 AnimePremi 🎬 - Your Ultimate Anime Odyssey!
 
-<p align="center">
-  <img src="YOUR_PROJECT_LOGO_OR_BANNER_URL_HERE" alt="AnimePremi Logo/Banner" width="400"/>
-</p>
 
 <p align="center">
   <strong>Dive into infinite worlds of imagination with AnimePremi, a stunning and immersive platform for anime enthusiasts.</strong>
   <br />
-  <a href="YOUR_LIVE_DEMO_URL_HERE" target="_blank"><strong>View Live Demo »</strong></a>
+  <a href="https://anime-premi.vercel.app/" target="_blank"><strong>View Live Demo »</strong></a>
   <br />
   <br />
   <a href="#-key-features">Key Features</a> ·
