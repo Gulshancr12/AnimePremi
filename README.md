@@ -30,7 +30,7 @@
 ## 📖 About The Project
 
 <p align="center">
-  <img src="YOUR_PROJECT_SCREENSHOT_OR_GIF_URL_HERE" alt="AnimePremi Screenshot/GIF" width="700"/>
+  
   <br/>
   <em>A glimpse into the AnimePremi universe.</em>
 </p>
