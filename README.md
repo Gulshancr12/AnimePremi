@@ -98,8 +98,8 @@ Make sure you have Node.js and npm (or yarn) installed on your system.
 
 1.  **Clone the repository:**
     ```bash
-    git clone https://github.com/YOUR_USERNAME/YOUR_REPONAME.git
-    cd YOUR_REPONAME
+    [git clone https://github.com/Gulshancr12/AnimePremi.git
+    cd AnimePremi
     ```
 2.  **Install NPM packages:**
     ```bash
