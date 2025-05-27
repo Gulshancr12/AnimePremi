@@ -19,6 +19,8 @@ import {
 // Your local image for creator profile
 import gulshanJadounImage from '../../assets/gulshan.jpg';
 import heroBg from '../../assets/heroBg.jpg';
+import ronit from '../../assets/ronit.jpg'
+import naveen from '../../assets/naveen.png'
 
 // Image URLs
 // const heroBg = 'https://img.freepik.com/free-photo/beautiful-anime-landscape-cartoon-scene_23-2151035237.jpg?uid=R113422793&ga=GA1.1.1195760834.1725803531&semt=ais_hybrid&w=740';
@@ -393,20 +395,23 @@ const Home = () => {
 
             {/* --- Fan Testimonials/Quotes --- */}
             <section id="testimonials" className="testimonials-section section-padding">
-                <h2 className="section-title" data-aos="fade-up"><span className="glitch-text" data-text="WHAT FANS ARE SAYING">WHAT FANS ARE SAYING</span></h2>
-                <div className="testimonials-grid">
-                    <div className="testimonial-card" data-aos="fade-right" data-aos-delay="100">
-                        <img src={userAvatar1} alt="User Avatar" className="testimonial-avatar"/>
-                        <p className="testimonial-quote">"AnimePremi is my go-to! The variety is insane, and the exclusives are top-notch. Finally, a platform that gets what anime fans want!"</p>
-                        <p className="testimonial-author">- AsunaKiri</p>
-                    </div>
-                    <div className="testimonial-card" data-aos="fade-left" data-aos-delay="200">
-                        <img src={userAvatar2} alt="User Avatar" className="testimonial-avatar"/>
-                        <p className="testimonial-quote">"The Glitchverse section is mind-blowing! And the community features make it feel like a real home for anime lovers. Highly recommend!"</p>
-                        <p className="testimonial-author">- NeoOtaku77</p>
-                    </div>
-                </div>
-            </section>
+    <h2 className="section-title" data-aos="fade-up">
+        <span className="glitch-text" data-text="WHAT FANS ARE SAYING">WHAT FANS ARE SAYING</span>
+    </h2>
+    <div className="testimonials-grid">
+        <div className="testimonial-card" data-aos="fade-right" data-aos-delay="100">
+            <img src={ronit} alt="Ronit Avatar" className="testimonial-avatar" />
+            <p className="testimonial-quote">"Bhai, AnimePremi ne to dil jeet liya! Jo bhi anime chahiye, sab yahan milta hai. Ronit-approved!"</p>
+            <p className="testimonial-author">- Ronit</p>
+        </div>
+        <div className="testimonial-card" data-aos="fade-left" data-aos-delay="200">
+            <img src={naveen} alt="Naveen Avatar" className="testimonial-avatar" />
+            <p className="testimonial-quote">"Community features aur Glitchverse ne to mujhe fan bana diya. Har anime lover ke liye perfect jagah hai!"</p>
+            <p className="testimonial-author">- Naveen</p>
+        </div>
+    </div>
+</section>
+
 
              {/* --- Final Parallax Break (Serene Temple) --- */}
              <section className="parallax-break-section serene-parallax" style={{ backgroundImage: `url(${parallaxBg4})` }}>
